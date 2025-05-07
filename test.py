@@ -17,8 +17,11 @@ from gcbfplus.env.base import RolloutResult
 from gcbfplus.trainer.utils import get_bb_cbf
 from gcbfplus.utils.graph import GraphsTuple
 from gcbfplus.utils.utils import jax_jit_np, tree_index, chunk_vmap, merge01, jax_vmap
+import matplotlib
+matplotlib.rcParams['font.family'] = 'DejaVu Sans'  # or any available default
 
 
+# python test.py --arg_example 
 def test(args):
     print(f"> Running test.py {args}")
 
@@ -263,6 +266,7 @@ def main():
     parser.add_argument("--dpi", type=int, default=100)
 
     args = parser.parse_args()
+    # Parses the arguments input through --arg-example
     test(args)
 
 

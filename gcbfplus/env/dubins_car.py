@@ -34,10 +34,11 @@ class DubinsCar(MultiAgentEnv):
 
     PARAMS = {
         "car_radius": 0.05,
-        "comm_radius": 0.5,
+        "comm_radius": 0.5, # cut in half
         "n_rays": 16,
         "obs_len_range": [0.1, 0.6],
         "n_obs": 8,
+        # potentially add 'num_edges / avg_edges' to see performance with number of edges
     }
 
     def __init__(

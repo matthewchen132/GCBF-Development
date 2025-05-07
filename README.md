@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
 
 # GCBF+
@@ -166,3 +167,7 @@ The developers were partially supported by MITRE during the project.
 © 2024 MIT
 
 © 2024 The MITRE Corporation
+=======
+# GCBF-Development
+Shared repository for research on GCBFs in the SAS Lab
+>>>>>>> 4a040f4be4db266e20363c9589b326e3f934e136

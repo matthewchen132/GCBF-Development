@@ -1,0 +1,26 @@
+Command list:
+command for pretrained Dubins Car: python test.py --path pretrained/DubinsCar/gcbf+
+ --epi 5 --area-size 4 -n 16 --obs 0
+
+
+
+
+
+Notes 4/23:
+
+1) testing performance of model with less edges 
+
+
+ - Reduced communicaiton radius from 0.5 to 0.25 Under dubins_car.py
+    PARAMS = {
+        "car_radius": 0.05,
+        "comm_radius": 0.25, # cut in half
+        "n_rays": 16,
+        "obs_len_range": [0.1, 0.6],
+        "n_obs": 8,
+    }
+
+
+
+2) DoubleIntegration
+step:   0, time:    12s, reward:  -15.1973, min/max reward:  -19.14/ -11.50, cost:  11.8125, unsafe_frac:   0.97, finish:   0.20

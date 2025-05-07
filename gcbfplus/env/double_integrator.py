@@ -31,15 +31,24 @@ class DoubleIntegrator(MultiAgentEnv):
             return self.agent.shape[0]
 
     EnvGraphsTuple = GraphsTuple[State, EnvState]
-
     PARAMS = {
         "car_radius": 0.05,
-        "comm_radius": 0.5,
-        "n_rays": 32,
+        "comm_radius": 0.5, # tweaked to 0.25 from 0.5 (maybe 1.0?)
+        "n_rays": 16,
         "obs_len_range": [0.1, 0.5],
-        "n_obs": 8,
+        "n_obs": 4,
         "m": 0.1,  # mass
     }
+
+    # ORIGINAL PARAMETERS
+    # PARAMS = {
+    #     "car_radius": 0.05,
+    #     "comm_radius": 0.5, # tweaked to 0.25 from 0.5 (maybe 1.0?)
+    #     "n_rays": 32,
+    #     "obs_len_range": [0.1, 0.5],
+    #     "n_obs": 8,
+    #     "m": 0.1,  # mass
+    # }
 
     def __init__(
             self,

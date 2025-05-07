@@ -11,6 +11,8 @@ from gcbfplus.env import make_env
 from gcbfplus.trainer.trainer import Trainer
 from gcbfplus.trainer.utils import is_connected
 
+# new from matt:
+from gcbfplus.env import double_integrator
 
 def train(args):
     print(f"> Running train.py {args}")
@@ -37,7 +39,8 @@ def train(args):
         num_agents=args.num_agents,
         num_obs=args.obs,
         n_rays=args.n_rays,
-        area_size=args.area_size
+        area_size=args.area_size,
+
     )
 
     # create low level controller
@@ -113,6 +116,9 @@ def train(args):
 
 
 def main():
+    
+    # PRINT PARAMETERS
+
     parser = argparse.ArgumentParser()
 
     # custom arguments
